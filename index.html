@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        img
+        {
+            height: 25px;
+
+        }
+        .welcome
+        {
+            display: none;
+        }
+        img:hover
+        {
+            cursor: pointer;
+            opacity: 90%;
+        }
+        .pass
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pp
+        {
+            width: 90%;
+        }
+        form {
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #input_container {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+        }
+
+        input {
+            width: 90%;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 20px;
+            border: 1px solid lightgray;
+        }
+
+        input:focus {
+            outline: 2px solid #005CE0;
+        }
+
+        #sign_up_btn button {
+            width: 30%;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            background-color: #005CE0;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #sign_up_btn {
+            width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #head h4 a {
+            color: #005CE0;
+            text-decoration: none;
+        }
+        button:hover
+        {
+            cursor: pointer;
+        }
+        @media (min-width: 750px)
+        {
+
+        .name
+        {
+            width: 98%;
+            display: flex;
+            gap: 20px;
+        }
+        #lname
+        {
+            padding-right: 0;
+        }
+        body
+        {
+            max-width: 100vw;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+        .welcome h4
+        {
+            max-width: 200px;
+            margin-top: 0;
+        }
+        .welcome
+        {
+            box-sizing: border-box;
+            height: 100vh;
+            padding:100px 60px;
+            background-color: #005CE0;
+            width: 40%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* justify-content: center; */
+        }
+        form
+        {
+            margin-right: 100px;
+        }
+        #butn_signin
+        {
+            margin-top: 60px;
+            border: 2px solid white;
+            padding: 10px 30px;
+            background-color: transparent;
+            color: white;
+            border-radius: 20px;
+
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="welcome">
+        <h1>Welcome Back!</h1>
+        <h4>To Keep connected with us please login with your personal details</h4>
+        <button id="butn_signin">Sign In</button>
+    </div>
+    <form action="">
+        <div id="head">
+            <h1>Create An Account</h1>
+            <h4>Already have an account? <a href="">Sign in</a></h4>
+        </div>
+        <div id="input_container">
+            <label for="u_name">
+                <input type="text" name="" id="u_name" placeholder="Username"></label>
+            <div class="name">
+                <label for="">
+                    <input type="text" name="" id="fname" placeholder="First name">
+                    </label>
+                    <label for="">
+                    <input type="text" name="" id="lname" placeholder="Last name">
+                </label>
+            </div>
+            <label for="email">
+                <input type="email" name="" id="email" placeholder="Email"></label>
+            <div class="pass">
+                <label for="password" class="pp">
+                    <input type="text" name="" id="password" placeholder="Password"></label>
+                    <label for="">
+                         <img src="data:image/png;base64,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"
+                        alt="" onclick="hidePass()">
+                    </label>
+            </div>
+        </div>
+        <div id="sign_up_btn">
+            <button onclick="validate(event)">Sign Up</button>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
